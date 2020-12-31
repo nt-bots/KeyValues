@@ -76,8 +76,14 @@ namespace KV
 			KeyValues &operator*() { return *it->second; }
 			const KeyValues &operator*() const { return *it->second; }
 
+#if(0)
 		private:
+#else
+		public:
+#endif
 			multimap_iterator it;
+
+		private:
 		};
 
 		struct const_iterator
